@@ -6,12 +6,12 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBFdnAM4taNXx-7PAO9PuJ0fi_f9FCE-IU",
-  authDomain: "clone-512a3.firebaseapp.com",
-  projectId: "clone-512a3",
-  storageBucket: "clone-512a3.appspot.com",
-  messagingSenderId: "935667475577",
-  appId: "1:935667475577:web:0b787ae86199017ddba0a8"
+  apiKey: "AIzaSyCg2E9bDWbHE971Lsqa-KdExqU8fG9zWHw",
+  authDomain: "foodmasterapp-38126.firebaseapp.com",
+  projectId: "foodmasterapp-38126",
+  storageBucket: "foodmasterapp-38126.appspot.com",
+  messagingSenderId: "345526471694",
+  appId: "1:345526471694:web:5d612847e3011d4c10405f"
 };
 
 // Initialize Firebase
