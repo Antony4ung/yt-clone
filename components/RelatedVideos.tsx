@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../redux/hooks'
 import {getRelatedVideos} from '../redux/actions/videoActions'
 import RecommendCard from './RecommendCard'
 
-const RelatedVideos = ({id}:{id:string}) => {
+const RelatedVideos = ({id}:{id:string | string[] | undefined}) => {
 
 
     const dispatch = useAppDispatch()
