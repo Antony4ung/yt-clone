@@ -123,7 +123,7 @@ export const getVideoById =
     }
   };
 
-  export const getRelatedVideos = (id:string) => async (dispatch: Dispatch<Action>) => {
+  export const getRelatedVideos = (id:string | string[] | undefined) => async (dispatch: Dispatch<Action>) => {
     try {
        dispatch({
           type: RELATED_VIDEO_REQUEST,
@@ -150,7 +150,7 @@ export const getVideoById =
     }
  }
  
- export const getVideosBySearch = (keyword:string) => async (dispatch: Dispatch<Action>,getState : () => {
+ export const getVideosBySearch = (keyword:string | string[] | undefined) => async (dispatch: Dispatch<Action>,getState : () => {
   (): any;
   new (): any;
   searchedVideos: { (): any; new (): any; nextPageToken: any };
@@ -171,7 +171,7 @@ export const getVideoById =
  
        dispatch({
           type: SEARCHED_VIDEO_SUCCESS,
-          payload: {videos : data.items , nextPageToken: data.nextPageToken,},
+          payload: {videos : data.items , nextPageToken: data.nextPageToken,loading:false},
        })
     } catch (error:any) {
        dispatch({

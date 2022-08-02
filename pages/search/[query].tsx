@@ -25,7 +25,7 @@ const Search = () => {
 
   return (
     <InfiniteScroll
-      dataLength={videos.length}
+      dataLength={videos?.length}
       next={fetchData}
       hasMore={true}
       loader={
@@ -34,7 +34,7 @@ const Search = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: videos.length > 0 ? "20vh" : "80vh",
+            height: videos?.length > 0 ? "20vh" : "80vh",
             width: "100%",
           }}
         >
@@ -43,7 +43,7 @@ const Search = () => {
       }
     >
       <Container>
-        {videos.map((video: any, index: number) => (
+        { videos && videos?.map((video: any, index: number) => (
           <Box sx={{ my: 1 }} key={index}>
             <VideoSearchCard video={video} videoId={video.id.videoId} />
           </Box>
