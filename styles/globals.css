@@ -13,4 +13,22 @@ a {
 
 * {
   box-sizing: border-box;
+  margin:0;
+  padding:0;
+  /* font-family: 'Mulish', sans-serif!important; */
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.card{
+  cursor:pointer
+}
+
+.card:hover{
+  transform:scale(0.97);
+  transition:0.5s
+  
 }
