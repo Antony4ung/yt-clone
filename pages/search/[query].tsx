@@ -13,7 +13,7 @@ const Search = () => {
 
   const dispatch = useAppDispatch();
 
-  const { videos, loading } = useAppSelector((state) => state.searchedVideos);
+  const { videos, loading } : { videos:[] , loading:boolean } = useAppSelector((state) => state.searchedVideos);
 
   const fetchData = () => {
     dispatch<any>(getVideosBySearch(query));
