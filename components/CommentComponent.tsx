@@ -15,7 +15,7 @@ const CommentComponent = ({ comment }: { comment: any }) => {
   }, [textDisplay]);
 
   return (
-    <Box sx={{ my: 3, display: "flex" }}>
+    <Box sx={{ my: 3, display: "flex",maxWidth:"100vw" }}>
       <Box>
         <Image
           src={authorProfileImageUrl}

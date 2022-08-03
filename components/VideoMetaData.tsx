@@ -81,6 +81,10 @@ const VideoMetaData = ({ video }: MetaDataProps) => {
                   {numeral(channel?.statistics?.subscriberCount).format("0.a")}{" "}
                   subscribers
                 </p>
+                <p>
+                  {numeral(channel?.statistics?.viewCount).format("0.a")}{" "}
+                  views
+                </p>
                 </Box>
               </Box>
               <Box sx={{ ml: 2, mt: 1 }}>

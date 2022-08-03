@@ -109,7 +109,7 @@ export default function MiniDrawer({
 }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [searchText,setSearchText] = React.useState('')
+  // const [searchText,setSearchText] = React.useState('')
 
   const {setDarkMode ,darkMode} = React.useContext(AppContext)
 
@@ -154,12 +154,12 @@ export default function MiniDrawer({
               <Image src={logo} width={40} height={40} alt="logo" />
               <h3 style={{ marginLeft: "10px" }}>Yote Shin 2.0</h3>
             </Box>
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <TextField label="Search" size="small" value={searchText} onChange={e=>setSearchText(e.target.value)} sx={{ width: "400px", mr: 1 }} />
               <Button onClick={()=>{searchText.length >= 1 && router.push(`/search/${searchText}`)}} variant="contained">
                 <SearchIcon />
               </Button>
-            </Box>
+            </Box> */}
             <Box sx={{ display: "flex" }}>
               {HeaderItems.map(({ label, path, icon }) => {
                 const Icon = headerIcons[icon];
@@ -248,9 +248,10 @@ export default function MiniDrawer({
           </ListItem>
           <ListItem
             disablePadding
-            sx={{ display: { xs: "block", md: "none" }, my: 1 }}
+            sx={{ display: {  }, my: 1 }}
           >
             <ListItemButton
+              onClick={()=>router.push('/search')}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
