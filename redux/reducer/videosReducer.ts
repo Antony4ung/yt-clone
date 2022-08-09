@@ -151,7 +151,7 @@ export const selectedVideoReducer = (
           return {
              ...state,
              nextPageToken: payload.nextPageToken,
-             videos: [...state.videos, ...payload.videos],
+             videos: [...payload.videos],
              loading: false,
           }
        case SEARCHED_VIDEO_FAIL:
